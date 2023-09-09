@@ -1,7 +1,7 @@
 import React, {useRef, useState } from 'react'
 import Header from './Header'
 import { Valid } from '../utils/Valid';
-import { auth } from "../utils/firebase";
+import { auth } from '../utils/firebase';
 import { createUserWithEmailAndPassword ,signInWithEmailAndPassword} from 'firebase/auth';
 
 const Login = () => {
