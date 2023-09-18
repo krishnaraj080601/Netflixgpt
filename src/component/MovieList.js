@@ -8,7 +8,7 @@ const MovieList = ({title,movies}) => {
     <div>
     <h1>{title}</h1>
     <div>
-    <MovieCard posterPath={movies[0].poster_path}/>
+    <MovieCard posterPath={movies[0].poster_path} />
     </div>
     </div>
   </div>
