@@ -1,10 +1,8 @@
 import React from 'react'
-import { createBrowserRouter } from 'react-router-dom'
+import { createBrowserRouter} from 'react-router-dom'
 import { RouterProvider } from 'react-router-dom'
 import Login from './Login';
-import Header from './Header';
-
-
+import Brow from './Brow';
 const Body = () => {
   const approuter =createBrowserRouter([
     {
@@ -13,9 +11,8 @@ const Body = () => {
 
     },
     {
-      path:"/Header",
-      element:<Header/>,
-
+      path:"/Brow",
+      element:<Brow/>
     },
   
   ]);

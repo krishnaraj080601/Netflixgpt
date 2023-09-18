@@ -1,9 +1,17 @@
-import React from 'react'
+import useNowPlayingMovies from '../hooks/userNowPlayingMovies';
+import Header from './Header';
+import MainContainer from './MainContainer';
+import SecondaryContainer from './SecondaryContainer';
 
 const Brow = () => {
-  return (
-    <div>Brow</div>
-  )
-}
+  useNowPlayingMovies();
+  return ( 
+  <div>
+   <Header/>
+   <MainContainer/>
+   <SecondaryContainer/>
+  </div>
+  );
+};
 
-export default Brow
+export default Brow;
