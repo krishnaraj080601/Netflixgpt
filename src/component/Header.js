@@ -5,6 +5,7 @@ import { auth } from '../utils/firebase';
 import { useDispatch, useSelector } from 'react-redux';
 import { addUser, removeUser } from '../utils/userSlice';
 import { Logo } from '../utils/Constant';
+import { toggleGptSearchView } from '../utils/gptSlice';
 
 
 const Header = () => {
@@ -40,7 +41,7 @@ const Header = () => {
     return () => unsubsribe();
   },[]);
   const handleGptSearchClick=() =>{
-    
+    dispatch(toggleGptSearchView());
   }
   return (
     <div className="absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex justify-between">
