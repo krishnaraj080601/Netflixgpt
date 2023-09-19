@@ -51,7 +51,7 @@ const Header = () => {
     
    { user && (
     <div className="flex p-2">
-    <select>
+    <select className="p-2 bg-gray-800 text-white">
     {SUPPORTED_LANGUAGES.map((lang) => (
       <option key={lang.identifier} value={lang.identifier}>
         {lang.name}
