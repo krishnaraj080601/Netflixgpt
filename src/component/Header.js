@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addUser, removeUser } from '../utils/userSlice';
 import { Logo, SUPPORTED_LANGUAGES } from '../utils/Constant';
 import { toggleGptSearchView } from '../utils/gptSlice';
+import { changeLanguage } from '../utils/Configslice';
 
 
 const Header = () => {
@@ -43,6 +44,9 @@ const Header = () => {
   const handleGptSearchClick=() =>{
     dispatch(toggleGptSearchView());
   }
+  const handleLanguageChange = (e)=>{
+    dispatch(changeLanguage(e.target.value));
+  }
   return (
     <div className="absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex justify-between">
     <img className="w-44 mx-auto md:mx-0"
@@ -51,7 +55,7 @@ const Header = () => {
     
    { user && (
     <div className="flex p-2">
-    <select className="p-2 bg-gray-800 text-white">
+    <select className="p-2 bg-gray-800 text-white" onChange={handleLanguageChange}>
     {SUPPORTED_LANGUAGES.map((lang) => (
       <option key={lang.identifier} value={lang.identifier}>
         {lang.name}
