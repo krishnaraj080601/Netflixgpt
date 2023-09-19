@@ -13,3 +13,4 @@
     { identifier: "hindi", name: "Hindi" },
     { identifier: "spanish", name: "Spanish" },
   ];
+  export const OPENAI_KEY="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";
