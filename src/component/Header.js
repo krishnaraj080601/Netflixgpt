@@ -56,7 +56,7 @@ const Header = () => {
     alt="logo" />
     
    { user && (
-    <div className="flex p-2">
+    <div className="flex p-2 justify-between">
     {showGptSearch && (<select className="p-2 bg-gray-800 text-white" onChange={handleLanguageChange}>
     {SUPPORTED_LANGUAGES.map((lang) => (
       <option key={lang.identifier} value={lang.identifier}>
@@ -66,7 +66,7 @@ const Header = () => {
     </select>
     )}
     <button className="py-2 px-4 mx-2 my-2 bg-purple-800 text-white rounded-lg" onClick={handleGptSearchClick}> {showGptSearch ? "Homepage" : "GPT Search"}</button>
-      <img className="w-12 h-12 " src={user?.photoURL}
+      <img className="hidden md:block w-12 h-12 " src={user?.photoURL}
     alt="usericon" />
     <button onClick={handleSignOut} className="font-bold text-white">
     (Sign out)
