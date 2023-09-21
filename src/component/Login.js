@@ -81,7 +81,7 @@ createUserWithEmailAndPassword(auth, Email.current.value,Password.current.value)
   return (
     <div>
     <Header/>
-    <div className="absolute bg-black h-screen object-coverw-full ">
+    <div className="absolute bg-black h-screen object-cover w-full ">
     <img src={BG_url} 
     alt="logo" />
     </div>
