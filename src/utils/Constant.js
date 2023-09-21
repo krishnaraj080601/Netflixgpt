@@ -3,7 +3,7 @@
       method: 'GET',
       headers: {
         accept: 'application/json',
-        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiODQ5OTEwY2EwMGQwYjY4NGYwMGI1OTAwODc5NmE2NSIsInN1YiI6IjY1MDQ3ODcyYjUxM2E4MDBhZDUwNWQ1ZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.tMqjKXdKHp_dSYaGqNzzoY3N2R384caswqS96Ni2C90'
+        Authorization: "Bearer"+process.env.REACT_APP_TMDB_KEY,
       },
     };
   export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w780";
@@ -13,4 +13,4 @@
     { identifier: "hindi", name: "Hindi" },
     { identifier: "spanish", name: "Spanish" },
   ];
-  export const OPENAI_KEY="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";
+  export const OPENAI_KEY =process.env.REACT_APP_OPENAI_KEY;
