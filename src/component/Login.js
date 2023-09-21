@@ -81,12 +81,12 @@ createUserWithEmailAndPassword(auth, Email.current.value,Password.current.value)
   return (
     <div>
     <Header/>
-    <div className="absolute">
+    <div className="absolute bg-slate-500 h-screen object-cover w-full">
     <img src={BG_url} 
     alt="logo" />
     </div>
     <form onSubmit={(e)=> e.preventDefault()}
-    className="w-3/12 absolute p-12 bg-black my-36 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-80">
+    className=" w-full md:w-3/12 absolute p-12 bg-black my-36 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-80">
     <h1 className="font-bold text-3xl py-4">{isSignInForm ?"signin":"signout"}</h1>
     <input ref={Email} type="text" placeholder="Email Address" className="p-4 my-4 w-full bg-gray-700"/>
     {!isSignInForm && (<input ref={name} type="text" placeholder="Name" className="p-4 my-4 w-full bg-gray-700" />)}
