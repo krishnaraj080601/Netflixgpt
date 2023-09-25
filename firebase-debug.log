@@ -1,0 +1,123 @@
+[debug] [2023-09-25T17:09:12.360Z] ----------------------------------------------------------------------
+[debug] [2023-09-25T17:09:12.363Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ganesan\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-09-25T17:09:12.363Z] CLI Version:   12.5.2
+[debug] [2023-09-25T17:09:12.363Z] Platform:      win32
+[debug] [2023-09-25T17:09:12.364Z] Node Version:  v18.18.0
+[debug] [2023-09-25T17:09:12.365Z] Time:          Mon Sep 25 2023 22:39:12 GMT+0530 (India Standard Time)
+[debug] [2023-09-25T17:09:12.365Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-09-25T17:09:12.470Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-09-25T17:09:12.471Z] > authorizing via signed-in user (krishnarajkrish755@gmail.com)
+[debug] [2023-09-25T17:09:12.471Z] [iam] checking project k111-135ca for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-09-25T17:09:12.474Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/k111-135ca:testIamPermissions [none]
+[debug] [2023-09-25T17:09:12.474Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/k111-135ca:testIamPermissions x-goog-quota-user=projects/k111-135ca
+[debug] [2023-09-25T17:09:12.474Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/k111-135ca:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-09-25T17:09:12.939Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/k111-135ca:testIamPermissions 200
+[debug] [2023-09-25T17:09:12.939Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/k111-135ca:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-09-25T17:09:12.940Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/k111-135ca [none]
+[debug] [2023-09-25T17:09:13.620Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/k111-135ca 200
+[debug] [2023-09-25T17:09:13.621Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/k111-135ca {"projectId":"k111-135ca","projectNumber":"320073307399","displayName":"K111","name":"projects/k111-135ca","resources":{"hostingSite":"k111-135ca"},"state":"ACTIVE","etag":"1_2a64afe2-16b9-415a-850f-d38a6456687f"}
+[info] 
+[info] === Deploying to 'k111-135ca'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-09-25T17:09:13.632Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/k111-135ca/versions [none]
+[debug] [2023-09-25T17:09:13.632Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/k111-135ca/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-09-25T17:09:14.757Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/k111-135ca/versions 200
+[debug] [2023-09-25T17:09:14.757Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/k111-135ca/versions {"name":"projects/320073307399/sites/k111-135ca/versions/7d7585145041563a","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[k111-135ca]: beginning deploy... 
+[debug] [2023-09-25T17:09:14.885Z] Error: EPERM: operation not permitted, scandir 'C:/Users/Ganesan/k111/build/favicon.ico'
+    at Object.readdirSync (node:fs:1527:3)
+    at GlobSync._readdir (C:\Users\Ganesan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:288:46)
+    at GlobSync._readdirInGlobStar (C:\Users\Ganesan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:245:17)
+    at GlobSync._readdir (C:\Users\Ganesan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:276:17)
+    at GlobSync._processReaddir (C:\Users\Ganesan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:137:22)
+    at GlobSync._process (C:\Users\Ganesan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:132:10)
+    at GlobSync._processGlobStar (C:\Users\Ganesan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:380:10)
+    at GlobSync._process (C:\Users\Ganesan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:130:10)
+    at new GlobSync (C:\Users\Ganesan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:45:10)
+    at globSync (C:\Users\Ganesan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:23:10)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-09-25T17:09:40.598Z] ----------------------------------------------------------------------
+[debug] [2023-09-25T17:09:40.600Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ganesan\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-09-25T17:09:40.601Z] CLI Version:   12.5.2
+[debug] [2023-09-25T17:09:40.601Z] Platform:      win32
+[debug] [2023-09-25T17:09:40.601Z] Node Version:  v18.18.0
+[debug] [2023-09-25T17:09:40.603Z] Time:          Mon Sep 25 2023 22:39:40 GMT+0530 (India Standard Time)
+[debug] [2023-09-25T17:09:40.603Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-09-25T17:09:40.713Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-09-25T17:09:40.714Z] > authorizing via signed-in user (krishnarajkrish755@gmail.com)
+[debug] [2023-09-25T17:09:40.715Z] [iam] checking project k111-135ca for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-09-25T17:09:40.718Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/k111-135ca:testIamPermissions [none]
+[debug] [2023-09-25T17:09:40.718Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/k111-135ca:testIamPermissions x-goog-quota-user=projects/k111-135ca
+[debug] [2023-09-25T17:09:40.719Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/k111-135ca:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-09-25T17:09:42.191Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/k111-135ca:testIamPermissions 200
+[debug] [2023-09-25T17:09:42.192Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/k111-135ca:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-09-25T17:09:42.195Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/k111-135ca [none]
+[debug] [2023-09-25T17:09:42.641Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/k111-135ca 200
+[debug] [2023-09-25T17:09:42.641Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/k111-135ca {"projectId":"k111-135ca","projectNumber":"320073307399","displayName":"K111","name":"projects/k111-135ca","resources":{"hostingSite":"k111-135ca"},"state":"ACTIVE","etag":"1_2a64afe2-16b9-415a-850f-d38a6456687f"}
+[info] 
+[info] === Deploying to 'k111-135ca'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-09-25T17:09:42.648Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/k111-135ca/versions [none]
+[debug] [2023-09-25T17:09:42.648Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/k111-135ca/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-09-25T17:09:43.701Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/k111-135ca/versions 200
+[debug] [2023-09-25T17:09:43.701Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/k111-135ca/versions {"name":"projects/320073307399/sites/k111-135ca/versions/37c2cc95824a6432","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[k111-135ca]: beginning deploy... 
+[debug] [2023-09-25T17:09:43.846Z] Error: EPERM: operation not permitted, scandir 'C:/Users/Ganesan/k111/build/favicon.ico'
+    at Object.readdirSync (node:fs:1527:3)
+    at GlobSync._readdir (C:\Users\Ganesan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:288:46)
+    at GlobSync._readdirInGlobStar (C:\Users\Ganesan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:245:17)
+    at GlobSync._readdir (C:\Users\Ganesan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:276:17)
+    at GlobSync._processReaddir (C:\Users\Ganesan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:137:22)
+    at GlobSync._process (C:\Users\Ganesan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:132:10)
+    at GlobSync._processGlobStar (C:\Users\Ganesan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:380:10)
+    at GlobSync._process (C:\Users\Ganesan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:130:10)
+    at new GlobSync (C:\Users\Ganesan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:45:10)
+    at globSync (C:\Users\Ganesan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:23:10)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-09-25T17:10:30.668Z] ----------------------------------------------------------------------
+[debug] [2023-09-25T17:10:30.671Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ganesan\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-09-25T17:10:30.671Z] CLI Version:   12.5.2
+[debug] [2023-09-25T17:10:30.672Z] Platform:      win32
+[debug] [2023-09-25T17:10:30.672Z] Node Version:  v18.18.0
+[debug] [2023-09-25T17:10:30.673Z] Time:          Mon Sep 25 2023 22:40:30 GMT+0530 (India Standard Time)
+[debug] [2023-09-25T17:10:30.673Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-09-25T17:10:30.780Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-09-25T17:10:30.781Z] > authorizing via signed-in user (krishnarajkrish755@gmail.com)
+[debug] [2023-09-25T17:10:30.781Z] [iam] checking project k111-135ca for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-09-25T17:10:30.784Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/k111-135ca:testIamPermissions [none]
+[debug] [2023-09-25T17:10:30.789Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/k111-135ca:testIamPermissions x-goog-quota-user=projects/k111-135ca
+[debug] [2023-09-25T17:10:30.790Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/k111-135ca:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-09-25T17:10:32.184Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/k111-135ca:testIamPermissions 200
+[debug] [2023-09-25T17:10:32.184Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/k111-135ca:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-09-25T17:10:32.185Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/k111-135ca [none]
+[debug] [2023-09-25T17:10:32.662Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/k111-135ca 200
+[debug] [2023-09-25T17:10:32.663Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/k111-135ca {"projectId":"k111-135ca","projectNumber":"320073307399","displayName":"K111","name":"projects/k111-135ca","resources":{"hostingSite":"k111-135ca"},"state":"ACTIVE","etag":"1_2a64afe2-16b9-415a-850f-d38a6456687f"}
+[info] 
+[info] === Deploying to 'k111-135ca'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-09-25T17:10:32.679Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/k111-135ca/versions [none]
+[debug] [2023-09-25T17:10:32.679Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/k111-135ca/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-09-25T17:10:33.783Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/k111-135ca/versions 200
+[debug] [2023-09-25T17:10:33.784Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/k111-135ca/versions {"name":"projects/320073307399/sites/k111-135ca/versions/d24d78bf90cca647","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[k111-135ca]: beginning deploy... 
+[debug] [2023-09-25T17:10:33.912Z] Error: EPERM: operation not permitted, scandir 'C:/Users/Ganesan/k111/build/favicon.ico'
+    at Object.readdirSync (node:fs:1527:3)
+    at GlobSync._readdir (C:\Users\Ganesan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:288:46)
+    at GlobSync._readdirInGlobStar (C:\Users\Ganesan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:245:17)
+    at GlobSync._readdir (C:\Users\Ganesan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:276:17)
+    at GlobSync._processReaddir (C:\Users\Ganesan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:137:22)
+    at GlobSync._process (C:\Users\Ganesan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:132:10)
+    at GlobSync._processGlobStar (C:\Users\Ganesan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:380:10)
+    at GlobSync._process (C:\Users\Ganesan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:130:10)
+    at new GlobSync (C:\Users\Ganesan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:45:10)
+    at globSync (C:\Users\Ganesan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:23:10)
+[error] 
+[error] Error: An unexpected error has occurred.
