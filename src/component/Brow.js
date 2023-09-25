@@ -8,6 +8,7 @@ import MainContainer from './MainContainer';
 import SecondaryContainer from './SecondaryContainer';
 import useUpComingMovies from '../hooks/useUpComingMovies';
 import useTrendingMovies from '../hooks/useTrendingMovies';
+import useTopratedMovies from '../hooks/useTopratedMovies';
 
 const Brow = () => {
   const showGptSearch=useSelector(store=>store.gpt.showGptSearch);
@@ -15,6 +16,7 @@ const Brow = () => {
   usePopularMovies();
   useUpComingMovies();
   useTrendingMovies();
+  useTopratedMovies();
   return ( 
   <div>
    <Header/>
