@@ -7,12 +7,14 @@ import Header from './Header';
 import MainContainer from './MainContainer';
 import SecondaryContainer from './SecondaryContainer';
 import useUpComingMovies from '../hooks/useUpComingMovies';
+import useTrendingMovies from '../hooks/useTrendingMovies';
 
 const Brow = () => {
   const showGptSearch=useSelector(store=>store.gpt.showGptSearch);
   useNowPlayingMovies();
   usePopularMovies();
   useUpComingMovies();
+  useTrendingMovies();
   return ( 
   <div>
    <Header/>
