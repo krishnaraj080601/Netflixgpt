@@ -87,7 +87,7 @@ createUserWithEmailAndPassword(auth, Email.current.value,Password.current.value)
     </div>
     <form onSubmit={(e)=> e.preventDefault()}
     className=" w-full md:w-3/12 absolute p-12 bg-black my-36 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-80">
-    <h1 className="font-bold text-3xl py-4">{isSignInForm ?"signin":"signout"}</h1>
+    <h1 className="font-bold text-3xl py-4">{isSignInForm ?"Signin":"SignUp"}</h1>
     <input ref={Email} type="text" placeholder="Email Address" className="p-4 my-4 w-full bg-gray-700"/>
     {!isSignInForm && (<input ref={name} type="text" placeholder="Name" className="p-4 my-4 w-full bg-gray-700" />)}
     <p className="text-red-500 font-bold text-lg py-2">{errorMessage}</p>
